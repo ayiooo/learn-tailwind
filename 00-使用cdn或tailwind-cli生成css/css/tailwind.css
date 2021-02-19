@@ -1,0 +1,24 @@
+.hello {
+  color: red;
+}
+/* 3 个 tailwind directive（指令） */
+/* 我们把下面叫做 layer（层）*/
+
+/* base layer
+  css reset 主要是对 css 进行重置，使用了 modern-normalize
+*/
+@tailwind base;
+/* components layer 
+  如果我们在生成的 tailwind.css 中搜索 container(类名) 
+  我们会找见 container 一个类组件(component) 通过 components layer 生成的。
+  这是一个响应式的 
+*/
+@tailwind components;
+/* utilities layer
+  vast（广阔的css，扩展 css），可以搜索 pt- shadow- rounded- flex etc.
+  如果没有引入，将不能使用 这些额外的写好的样式。
+  ---------------------------------
+  我们也能看到css 中包含 -webkit- 厂商(vendor)前缀。
+  这些并不是 tailwind 提供的。但是会自动的通过 auto-prefixer 插件进行添加
+*/
+@tailwind utilities;
