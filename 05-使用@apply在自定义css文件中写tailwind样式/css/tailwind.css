@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply inline-block px-5 py-3 rounded-lg 
+        focus:outline-none focus:ring focus:ring-offset-2 focus:ring-opacity-50 
+        uppercase tracking-wider font-semibold text-sm sm:text-base;
+  }
+  .btn-primary {
+    /* @apply btn; */
+    @apply bg-blue-500 
+    text-white
+        focus:ring-blue-500 
+      hover:bg-blue-400
+      shadow-lg transform transition hover:-translate-y-0.5;
+  }
+  .btn-secondary {
+    /* @apply btn; */
+    @apply bg-gray-300 
+        focus:ring-gray-500
+      hover:bg-gray-200  
+        text-gray-900;
+  }
+}
